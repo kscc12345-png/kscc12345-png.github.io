@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>리워드 앱 개발자 페이지 — 밈모 · 메모 · 스모</title>
+<meta name="description" content="광고 참여 보상으로 암호화폐 에어드랍을 증정하는 안드로이드 리워드 앱 밈모(MEMEMO), 메모(MAJORMO), 스모(STABLEMO)의 공식 개발자 페이지." />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0b0b0f;
+    --panel: #15151b;
+    --border: #26262f;
+    --text: #f2f2f5;
+    --sub: #a9a9b6;
+    --muted: #72727d;
+    --accent: #2bc20f;
+  }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic",
+                 "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 54px 22px 76px; }
+
+  header { text-align: center; margin-bottom: 46px; }
+  header h1 { font-size: 1.45rem; letter-spacing: -.02em; }
+  header p { color: var(--sub); font-size: .93rem; margin-top: 10px; }
+
+  .app {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px; margin-bottom: 18px;
+  }
+  .head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .icon {
+    width: 54px; height: 54px; flex-shrink: 0; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 21px; font-weight: 800;
+  }
+  .i-meme { background: radial-gradient(circle at 32% 28%, #f7d774, #c99a1f 62%, #8a6410); color: #4a3506; }
+  .i-major { background: radial-gradient(circle at 32% 28%, #cfd8e6, #8899b0 62%, #55637a); color: #23303f; }
+  .i-stable { background: radial-gradient(circle at 32% 28%, #7ae0c4, #23a583 62%, #14705a); color: #0a3628; }
+  .name { font-size: 1.1rem; font-weight: 700; }
+  .desc { color: var(--sub); font-size: .87rem; margin-top: 2px; }
+  .badge {
+    display: inline-block; font-size: .72rem; font-weight: 700;
+    padding: 3px 9px; border-radius: 10px; margin-left: 8px; vertical-align: 2px;
+  }
+  .live { background: rgba(43,194,15,.15); color: var(--accent); border: 1px solid rgba(43,194,15,.4); }
+  .soon { background: rgba(160,160,170,.12); color: var(--muted); border: 1px solid var(--border); }
+
+  dl { display: grid; grid-template-columns: 92px 1fr; gap: 5px 12px; margin-bottom: 14px; }
+  dt { color: var(--muted); font-size: .84rem; }
+  dd { color: var(--sub); font-size: .84rem; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a {
+    color: var(--sub); text-decoration: none; font-size: .82rem;
+    border: 1px solid var(--border); border-radius: 16px;
+    padding: 7px 13px; background: rgba(255,255,255,.02);
+  }
+  .links a:hover { color: var(--accent); border-color: var(--accent); }
+  .links a.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .pending { color: var(--muted); font-size: .8rem; }
+
+  section.info { margin-top: 40px; }
+  section.info h2 {
+    font-size: 1rem; margin-bottom: 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+  section.info p { color: var(--sub); font-size: .89rem; }
+  .mail { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .note {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 15px 17px; margin-top: 14px;
+  }
+  .note p { font-size: .84rem; color: var(--muted); }
+
+  footer {
+    margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--border);
+    text-align: center; color: var(--muted); font-size: .8rem;
+  }
+  @media (max-width: 420px) {
+    dl { grid-template-columns: 78px 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>리워드 앱 개발자 페이지</h1>
+    <p>
+      광고 참여 보상으로 암호화폐 에어드랍을 증정하는 안드로이드 앱을 만듭니다.<br />
+      아래 세 앱은 같은 원칙으로 운영됩니다 — 이용자에게 금전을 요구하지 않고,
+      이용자의 자산이나 지갑 개인키를 보관하지 않습니다.
+    </p>
+  </header>
+
+  <!-- ───────── 밈모 (MEMEMO) ───────── -->
+  <div class="app">
+    <div class="head">
+      <div class="icon i-meme">M</div>
+      <div>
+        <div class="name">밈모 (MEMEMO)<span class="badge live">출시</span></div>
+        <div class="desc">가볍게 모으는 밈코인 리워드</div>
+      </div>
+    </div>
+    <dl>
+      <dt>포인트</dt><dd>MMP</dd>
+      <dt>지원 코인</dt><dd>도지코인(DOGE) · 시바이누(SHIB) · 페페(PEPE) · 플로키(FLOKI) · 봉크(BONK) · 도그위프햇(WIF) · 펭구(PENGU) · 터보(TURBO)</dd>
+      <dt>네트워크</dt><dd>이더리움(ERC-20) · BNB 체인(BEP-20) · 솔라나 · 도지코인</dd>
+    </dl>
+    <div class="links">
+      <a class="primary" href="https://play.google.com/store/apps/details?id=com.mememo.myapp">Google Play</a>
+      <a href="https://polite-telescope-fe5.notion.site/Mememo-39c208c0f791809699e5fa52af6a8d71?source=copy_link">이용약관</a>
+      <a href="https://polite-telescope-fe5.notion.site/Mememo-39c208c0f7918023890ec174544ce38e?source=copy_link">개인정보처리방침</a>
+      <a href="https://polite-telescope-fe5.notion.site/MEMEMO-3a3208c0f791807ba574f04e43368ec1?source=copy_link">계정 삭제 안내</a>
+    </div>
+  </div>
+
+  <!-- ───────── 메모 (MAJORMO) ───────── -->
+  <div class="app">
+    <div class="head">
+      <div class="icon i-major">M</div>
+      <div>
+        <div class="name">메모 (MAJORMO)<span class="badge soon">출시 준비 중</span></div>
+        <div class="desc">가볍게 모으는 메이저코인 리워드</div>
+      </div>
+    </div>
+    <dl>
+      <dt>포인트</dt><dd>MJP</dd>
+      <dt>지원 코인</dt><dd>비트코인(BTC) · 이더리움(ETH) · 비앤비(BNB) · 솔라나(SOL) · 리플(XRP) · 카르다노(ADA) · 트론(TRX) · 수이(SUI)</dd>
+    </dl>
+    <div class="links">
+      <a href="https://polite-telescope-fe5.notion.site/MAJORMO-3b3208c0f791805e81a4e938cea996b4?source=copy_link">이용약관</a>
+      <a href="https://polite-telescope-fe5.notion.site/MAJORMO-3b3208c0f79180f19f6eee3f307a1409?source=copy_link">개인정보처리방침</a>
+      <a href="https://polite-telescope-fe5.notion.site/MAJORMO-3b3208c0f7918070b835c7c15ec43637?source=copy_link">계정 삭제 안내</a>
+    </div>
+  </div>
+
+  <!-- ───────── 스모 (STABLEMO) ───────── -->
+  <div class="app">
+    <div class="head">
+      <div class="icon i-stable">S</div>
+      <div>
+        <div class="name">스모 (STABLEMO)<span class="badge soon">출시 준비 중</span></div>
+        <div class="desc">가볍게 모으는 스테이블코인 리워드</div>
+      </div>
+    </div>
+    <dl>
+      <dt>포인트</dt><dd>SMP</dd>
+      <dt>지원 코인</dt><dd>테더(USDT) · USD코인(USDC)</dd>
+    </dl>
+    <p class="pending">약관 및 정책 페이지 준비 중입니다.</p>
+  </div>
+
+  <!-- ───────── 공통 안내 ───────── -->
+  <section class="info">
+    <h2>문의</h2>
+    <p>서비스 이용, 에어드랍 지급, 개인정보 관련 문의는 아래로 접수해 주세요.</p>
+    <p style="margin-top:8px">
+      밈모 · 메모 —
+      <a class="mail" href="mailto:mememo.reviewer@gmail.com">mememo.reviewer@gmail.com</a><br />
+      스모 —
+      <a class="mail" href="mailto:stablemo.support@gmail.com">stablemo.support@gmail.com</a>
+    </p>
+  </section>
+
+  <section class="info">
+    <h2>서비스 공통 원칙</h2>
+    <div class="note">
+      <p>
+        각 앱의 에어드랍은 광고 참여에 대한 프로모션 보상으로 코인을 증정하는 일방향
+        프로모션입니다. 회원이 개발자에게 암호화폐를 입금·전송하는 기능, 개발자가 회원의
+        자산이나 지갑 개인키를 보관·수탁하는 기능은 제공되지 않으며, 어떠한 형태의 유상
+        교환·매매도 이루어지지 않습니다. 지급되는 코인은 개발자가 자기 자금으로 취득해
+        보유한 코인이며, 개발자가 자기 계산으로 직접 전송합니다.
+      </p>
+      <p style="margin-top:10px">
+        앱 내 포인트는 현금이나 가상자산이 아닌 앱 내부 점수이며, 구매·양도·매매·출금할 수
+        없습니다. 본 앱들은 투자 서비스가 아니며, 개발자는 지급하는 코인의 가격, 시장에서의
+        매도 가능성, 유동성을 일체 보장하지 않습니다. 암호화폐의 가치는 변동될 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    개발자 김상현 · 각 앱은 만 19세 이상 이용 가능<br />
+    &copy; 2026
+  </footer>
+
+</div>
+</body>
+</html>
