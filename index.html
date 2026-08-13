@@ -33,14 +33,24 @@
     border-radius: 16px; padding: 22px; margin-bottom: 18px;
   }
   .head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  /* 스토어에 올라간 실제 앱 아이콘을 그대로 쓴다 (이용자가 Play에서 보는 것과 같게) */
   .icon {
-    width: 54px; height: 54px; flex-shrink: 0; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 21px; font-weight: 800;
+    width: 64px; height: 64px; flex-shrink: 0;
+    border-radius: 16px; display: block;
+    border: 1px solid var(--border);
   }
-  .i-meme { background: radial-gradient(circle at 32% 28%, #f7d774, #c99a1f 62%, #8a6410); color: #4a3506; }
-  .i-major { background: radial-gradient(circle at 32% 28%, #cfd8e6, #8899b0 62%, #55637a); color: #23303f; }
-  .i-stable { background: radial-gradient(circle at 32% 28%, #7ae0c4, #23a583 62%, #14705a); color: #0a3628; }
+
+  .sub {
+    font-size: .8rem; color: var(--muted); font-weight: 600;
+    margin: 2px 0 8px; letter-spacing: .02em;
+  }
+  /* 지원 네트워크 표 — 좁은 화면에서는 표만 가로 스크롤 */
+  .table-scroll { overflow-x: auto; margin-bottom: 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 400px; font-size: .82rem; }
+  th, td { border: 1px solid var(--border); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: rgba(255,255,255,.03); color: var(--text); font-weight: 600; white-space: nowrap; }
+  td { color: var(--sub); }
+  td:first-child { white-space: nowrap; color: var(--text); font-weight: 600; }
   .name { font-size: 1.1rem; font-weight: 700; }
   .desc { color: var(--sub); font-size: .87rem; margin-top: 2px; }
   .badge {
@@ -101,7 +111,7 @@
   <!-- ───────── 밈모 (MEMEMO) ───────── -->
   <div class="app">
     <div class="head">
-      <div class="icon i-meme">M</div>
+      <img class="icon" src="assets/coin-mememo.png" alt="밈모 앱 아이콘" width="64" height="64" />
       <div>
         <div class="name">밈모 (MEMEMO)<span class="badge live">출시</span></div>
         <div class="desc">가볍게 모으는 밈코인 리워드</div>
@@ -109,9 +119,23 @@
     </div>
     <dl>
       <dt>포인트</dt><dd>MMP</dd>
-      <dt>지원 코인</dt><dd>도지코인(DOGE) · 시바이누(SHIB) · 페페(PEPE) · 플로키(FLOKI) · 봉크(BONK) · 도그위프햇(WIF) · 펭구(PENGU) · 터보(TURBO)</dd>
-      <dt>네트워크</dt><dd>이더리움(ERC-20) · BNB 체인(BEP-20) · 솔라나 · 도지코인</dd>
     </dl>
+    <div class="sub">지원 네트워크</div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
+        <tbody>
+          <tr><td>도지코인 (DOGE)</td><td>BNB 체인(BEP-20) · 도지코인</td></tr>
+          <tr><td>시바이누 (SHIB)</td><td>이더리움(ERC-20) · BNB 체인(BEP-20)</td></tr>
+          <tr><td>페페 (PEPE)</td><td>이더리움(ERC-20)</td></tr>
+          <tr><td>플로키 (FLOKI)</td><td>이더리움(ERC-20) · BNB 체인(BEP-20)</td></tr>
+          <tr><td>봉크 (BONK)</td><td>BNB 체인(BEP-20) · 솔라나</td></tr>
+          <tr><td>도그위프햇 (WIF)</td><td>솔라나</td></tr>
+          <tr><td>펭구 (PENGU)</td><td>솔라나</td></tr>
+          <tr><td>터보 (TURBO)</td><td>이더리움(ERC-20)</td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="links">
       <a class="primary" href="https://play.google.com/store/apps/details?id=com.mememo.myapp">Google Play</a>
       <a href="https://polite-telescope-fe5.notion.site/Mememo-39c208c0f791809699e5fa52af6a8d71?source=copy_link">이용약관</a>
@@ -123,7 +147,7 @@
   <!-- ───────── 메모 (MAJORMO) ───────── -->
   <div class="app">
     <div class="head">
-      <div class="icon i-major">M</div>
+      <img class="icon" src="assets/coin-majormo.png" alt="메모 앱 아이콘" width="64" height="64" />
       <div>
         <div class="name">메모 (MAJORMO)<span class="badge soon">출시 준비 중</span></div>
         <div class="desc">가볍게 모으는 메이저코인 리워드</div>
@@ -131,8 +155,23 @@
     </div>
     <dl>
       <dt>포인트</dt><dd>MJP</dd>
-      <dt>지원 코인</dt><dd>비트코인(BTC) · 이더리움(ETH) · 비앤비(BNB) · 솔라나(SOL) · 리플(XRP) · 카르다노(ADA) · 트론(TRX) · 수이(SUI)</dd>
     </dl>
+    <div class="sub">지원 네트워크</div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
+        <tbody>
+          <tr><td>비트코인 (BTC)</td><td>BNB 체인(BEP-20) · 비트코인</td></tr>
+          <tr><td>이더리움 (ETH)</td><td>BNB 체인(BEP-20) · 이더리움(ERC-20) · 베이스 · 아비트럼 · 옵티미즘 · zkSync Era · 만타 · 스크롤 · 스타크넷</td></tr>
+          <tr><td>비앤비 (BNB)</td><td>BNB 체인(BEP-20)</td></tr>
+          <tr><td>솔라나 (SOL)</td><td>BNB 체인(BEP-20) · 솔라나</td></tr>
+          <tr><td>리플 (XRP)</td><td>BNB 체인(BEP-20) · XRP 원장</td></tr>
+          <tr><td>카르다노 (ADA)</td><td>BNB 체인(BEP-20) · 카르다노</td></tr>
+          <tr><td>트론 (TRX)</td><td>트론(TRC-20)</td></tr>
+          <tr><td>수이 (SUI)</td><td>BNB 체인(BEP-20) · 수이</td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="links">
       <a href="https://polite-telescope-fe5.notion.site/MAJORMO-3b3208c0f791805e81a4e938cea996b4?source=copy_link">이용약관</a>
       <a href="https://polite-telescope-fe5.notion.site/MAJORMO-3b3208c0f79180f19f6eee3f307a1409?source=copy_link">개인정보처리방침</a>
@@ -143,7 +182,7 @@
   <!-- ───────── 스모 (STABLEMO) ───────── -->
   <div class="app">
     <div class="head">
-      <div class="icon i-stable">S</div>
+      <img class="icon" src="assets/coin-stablemo.png" alt="스모 앱 아이콘" width="64" height="64" />
       <div>
         <div class="name">스모 (STABLEMO)<span class="badge soon">출시 준비 중</span></div>
         <div class="desc">가볍게 모으는 스테이블코인 리워드</div>
@@ -151,8 +190,17 @@
     </div>
     <dl>
       <dt>포인트</dt><dd>SMP</dd>
-      <dt>지원 코인</dt><dd>테더(USDT) · USD코인(USDC)</dd>
     </dl>
+    <div class="sub">지원 네트워크</div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
+        <tbody>
+          <tr><td>테더 (USDT)</td><td>BNB 체인(BEP-20) · 옵티미즘 · 아발란체(C-Chain) · 폴리곤 · 아비트럼 · 솔라나 · 이더리움(ERC-20) · 트론(TRC-20)</td></tr>
+          <tr><td>USD코인 (USDC)</td><td>BNB 체인(BEP-20) · 옵티미즘 · 아발란체(C-Chain) · 폴리곤 · 아비트럼 · 베이스 · 솔라나 · 이더리움(ERC-20)</td></tr>
+        </tbody>
+      </table>
+    </div>
     <p class="pending">약관 및 정책 페이지 준비 중입니다.</p>
   </div>
 
@@ -164,6 +212,28 @@
       밈모 · 메모 · 스모 공통 —
       <a class="mail" href="mailto:mememo.reviewer@gmail.com">mememo.reviewer@gmail.com</a>
     </p>
+  </section>
+
+  <section class="info">
+    <h2>에어드랍 신청 시 유의사항</h2>
+    <div class="note">
+      <p>
+        <strong>메모(Memo)·태그(Tag)가 필요한 네트워크는 반드시 함께 입력해 주세요.</strong>
+        XRP 원장처럼 하나의 주소를 여러 이용자가 나눠 쓰는 네트워크는, 주소만으로는 누구의
+        입금인지 구분할 수 없어 <strong>메모·태그가 없으면 입금이 확인되지 않습니다.</strong>
+        거래소나 지갑에서 입금 주소를 받을 때 메모·태그가 함께 표시된다면, 앱의 메모 칸에
+        그 값을 그대로 입력하셔야 합니다.
+      </p>
+      <p style="margin-top:10px">
+        <strong>네트워크를 잘못 고르면 코인이 사라질 수 있습니다.</strong> 같은 코인이라도
+        받는 쪽 지갑이 지원하는 네트워크가 아니면 되찾기 어렵습니다. 신청 전에 받는 주소의
+        네트워크가 위 표의 네트워크와 같은지 확인해 주세요.
+      </p>
+      <p style="margin-top:10px">
+        메모·태그 누락이나 네트워크 선택 착오로 발생한 손실은 개발자가 되돌릴 수 없습니다.
+        전송이 끝난 뒤에는 취소·회수가 불가능하므로 신청 전에 한 번 더 확인해 주세요.
+      </p>
+    </div>
   </section>
 
   <section class="info">
