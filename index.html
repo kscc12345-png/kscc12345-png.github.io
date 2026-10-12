@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>리워드 앱 개발자 페이지 — 밈모 · 메모 · 스모</title>
-<meta name="description" content="광고 참여 보상으로 암호화폐 에어드랍을 증정하는 안드로이드 리워드 앱 밈모(MEMEMO), 메모(MAJORMO), 스모(STABLEMO)의 공식 개발자 페이지." />
+<title>리워드 앱 개발자 페이지 — 밈모 · 메모</title>
+<meta name="description" content="광고 참여 보상으로 암호화폐 에어드랍을 증정하는 안드로이드 리워드 앱 밈모(MEMEMO), 메모(MAJORMO)의 공식 개발자 페이지." />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -103,7 +103,7 @@
     <h1>리워드 앱 개발자 페이지</h1>
     <p>
       광고 참여 보상으로 암호화폐 에어드랍을 증정하는 안드로이드 앱을 만듭니다.<br />
-      아래 세 앱은 같은 원칙으로 운영됩니다 — 이용자에게 금전을 요구하지 않고,
+      아래 두 앱은 같은 원칙으로 운영됩니다 — 이용자에게 금전을 요구하지 않고,
       이용자의 자산이나 지갑 개인키를 보관하지 않습니다.
     </p>
   </header>
@@ -114,13 +114,29 @@
       <img class="icon" src="assets/coin-mememo.png" alt="밈모 앱 아이콘" width="64" height="64" />
       <div>
         <div class="name">밈모 (MEMEMO)<span class="badge live">출시</span></div>
-        <div class="desc">가볍게 모으는 밈코인 리워드</div>
+        <div class="desc">가볍게 모으는 코인 리워드</div>
       </div>
     </div>
     <dl>
       <dt>포인트</dt><dd>MMP</dd>
     </dl>
-    <div class="sub">지원 네트워크</div>
+    <div class="sub">지원 네트워크 — 메이저코인</div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
+        <tbody>
+          <tr><td>비트코인 (BTC)</td><td>BNB 체인(BEP-20) · 비트코인</td></tr>
+          <tr><td>이더리움 (ETH)</td><td>BNB 체인(BEP-20) · 이더리움(ERC-20) · 베이스 · 아비트럼 · 옵티미즘 · zkSync Era · 만타 · 스크롤 · 스타크넷</td></tr>
+          <tr><td>비앤비 (BNB)</td><td>BNB 체인(BEP-20)</td></tr>
+          <tr><td>솔라나 (SOL)</td><td>BNB 체인(BEP-20) · 솔라나</td></tr>
+          <tr><td>리플 (XRP)</td><td>BNB 체인(BEP-20) · XRP 원장</td></tr>
+          <tr><td>카르다노 (ADA)</td><td>BNB 체인(BEP-20) · 카르다노</td></tr>
+          <tr><td>트론 (TRX)</td><td>트론(TRC-20)</td></tr>
+          <tr><td>수이 (SUI)</td><td>BNB 체인(BEP-20) · 수이</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sub">지원 네트워크 — 밈코인</div>
     <div class="table-scroll">
       <table>
         <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
@@ -179,41 +195,19 @@
     </div>
   </div>
 
-  <!-- ───────── 스모 (STABLEMO) ───────── -->
-  <div class="app">
-    <div class="head">
-      <img class="icon" src="assets/coin-stablemo.png" alt="스모 앱 아이콘" width="64" height="64" />
-      <div>
-        <div class="name">스모 (STABLEMO)<span class="badge soon">출시 준비 중</span></div>
-        <div class="desc">가볍게 모으는 스테이블코인 리워드</div>
-      </div>
-    </div>
-    <dl>
-      <dt>포인트</dt><dd>SMP</dd>
-    </dl>
-    <div class="sub">지원 네트워크</div>
-    <div class="table-scroll">
-      <table>
-        <thead><tr><th>코인</th><th>지원 네트워크</th></tr></thead>
-        <tbody>
-          <tr><td>테더 (USDT)</td><td>BNB 체인(BEP-20) · 옵티미즘 · 아발란체(C-Chain) · 폴리곤 · 아비트럼 · 솔라나 · 이더리움(ERC-20) · 트론(TRC-20)</td></tr>
-          <tr><td>USD코인 (USDC)</td><td>BNB 체인(BEP-20) · 옵티미즘 · 아발란체(C-Chain) · 폴리곤 · 아비트럼 · 베이스 · 솔라나 · 이더리움(ERC-20)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="links">
-      <a href="/stablemo/terms/">이용약관</a>
-      <a href="/stablemo/privacy/">개인정보처리방침</a>
-      <a href="/stablemo/delete/">계정 삭제 안내</a>
-    </div>
-  </div>
-
   <!-- ───────── 공통 안내 ───────── -->
+  <!--
+    2026-10-12 — 스모(STABLEMO) 섹션을 이 페이지에서 뺐다.
+    🔴 다만 /stablemo/terms/ · /privacy/ · /delete/ 페이지 자체는 지우지 않았다.
+       스모가 Play 비공개 테스트에 올라가 있고, Play Console 이 개인정보처리방침
+       URL 을 필수로 요구한다. 페이지를 지우면 그 필수 링크가 죽는다.
+       특금법 회신(11-06) 뒤 스모 거취가 정해지면 그때 같이 정리한다.
+  -->
   <section class="info">
     <h2>문의</h2>
     <p>서비스 이용, 에어드랍 지급, 개인정보 관련 문의는 아래로 접수해 주세요.</p>
     <p style="margin-top:8px">
-      밈모 · 메모 · 스모 공통 —
+      밈모 · 메모 공통 —
       <a class="mail" href="mailto:mememo.reviewer@gmail.com">mememo.reviewer@gmail.com</a>
     </p>
   </section>
